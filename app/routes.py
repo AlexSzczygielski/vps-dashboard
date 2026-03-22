@@ -142,6 +142,7 @@ def get_demo_asset(asset_name):
     # Check if file exists
     file_path = os.path.join(folder, asset_name)
     if not os.path.isfile(file_path):
+        print("Asset not found")
         abort(404)
 
     # Serve the file
