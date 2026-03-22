@@ -6,18 +6,16 @@
     <title>Personal Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
     <style>
-        /*Day/night background config*/
         :root {
-            --bg-image: url('{{ day_background_image_url }}');
+            --bg-image: url("{{ url_for('static', filename='images/' + day_background_image_url) }}");
         }
 
-        /* DARK MODE AUTO DETECT */
         @media (prefers-color-scheme: dark) {
             :root {
-                --bg-image: url('{{ night_background_image_url }}');
+                --bg-image: url("{{ url_for('static', filename='images/' + night_background_image_url) }}");
             }
         }
-    </style>
+</style>
 </head>
 <body>
 
