@@ -6,7 +6,7 @@ def create_app():
 
     # app.root_path is the 'app' package directory.
     project_root = os.path.abspath(os.path.join(app.root_path, '..'))
-    env_file = os.path.join(project_root, ".wol_env")
+    env_file = os.path.abspath(os.path.join(app.root_path,'..','..', ".wol_env"))
 
     SECRET_KEY = None
     PASTEBIN_PASSWORD = None
@@ -15,7 +15,7 @@ def create_app():
         with open(env_file) as f:
             for line in f:
                 line = line.strip()
-                if line.startswith("SECRET_KEY="):
+                if line.startswith("SERVER_TOKEN="):
                     SECRET_KEY = line.split("=", 1)[1].strip()
                 elif line.startswith("PASTEBIN_PASSWORD="):
                     PASTEBIN_PASSWORD = line.split("=", 1)[1].strip()
