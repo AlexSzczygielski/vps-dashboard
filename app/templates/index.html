@@ -5,8 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <style>
+        /*Day/night background config*/
+        :root {
+            --bg-image: url('{{ day_background_image_url }}');
+        }
+
+        /* DARK MODE AUTO DETECT */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-image: url('{{ night_background_image_url }}');
+            }
+        }
+    </style>
 </head>
-<body style="background-image: url('{{ background_image_url }}');">
+<body>
 
     <header>
         <div class="header-nav">
@@ -51,8 +64,8 @@
             // Set greeting
             let greeting = "Welcome";
             const name = "{{ greeting_name }}";
-            if (hours < 12) {
-                greeting = "Good morning";
+            if (hours < 15) {
+                greeting = "Salve";
             } else if (hours < 18) {
                 greeting = "Good afternoon";
             } else {

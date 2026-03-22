@@ -55,7 +55,8 @@ def index():
     return render_template(
         'index.html',
         greeting_name=config.get("greeting_name", "User"),
-        background_image_url=config.get("background_image_url"),
+        day_background_image_url=config.get("day_background_image_url"),
+        night_background_image_url=config.get("night_background_image_url"),
         link_groups=config.get("link_groups", []),
         pastebin_enabled=pastebin_enabled
     )

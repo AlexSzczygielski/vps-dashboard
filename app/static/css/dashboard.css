@@ -1,3 +1,11 @@
+body::before {
+    /*Making letters more visible by darkening background*/
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.27);   /* adjust strength */
+    z-index: -1;
+}
 /* General Body Styles */
 body {
     font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -5,10 +13,13 @@ body {
     color: #e0e0e0;
     margin: 0;
     padding: 20px;
+    
+    background-image: var(--bg-image);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: center -210px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;

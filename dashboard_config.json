@@ -1,13 +1,26 @@
 {
   "greeting_name": "Olek",
-  "background_image_url": "https://unsplash.com/photos/brown-concrete-statue-under-blue-sky-during-daytime-Xfu28sRTFWY",
+  "day_background_image_url": "https://lalaounistravel.com/wp-content/uploads/2024/03/ΝΑΟΣ-ΑΦΑΙΑΣ-01-LALAOUNIS-TRAVEL-AEGINA.webp",
+  "night_background_image_url": "https://admin.onassis.org/images/o5YoOt8ef50wWn977O9P-QgLN9M=/7548/width-2560/ACROPOLIS_017_fin_copy.jpg",
+  "unused11": "https://ancient-greece.org/wp-content/uploads/Akropolis_by_Leo_von_Klenze.jpg",
+  "unused10": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Temple_of_Aphaia_in_February_2005_13.jpg",
+  "unused9": "https://www.visitgreece.gr/images/1743x752/jpg/files/i_477810265_aegina-afaia_1743x752.jpg",
+  "unused8": "https://www.classicist.org/wp-content/uploads/2011/10/_pagebody/Figure-6-1024x642.jpg",
+  "unused7": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjyHw4JPY3H9tHpLN9KdDVfDP0BV6iBs8-Y74BOodHeBAgLpknxfD1_ppHnXBeqPb4yg6oT9a9IGoyP5guRP_3WRnhlp8HeQZYZCZcX5cKh4AIOUwxAM_Z3IQE_r5qdIQ3UDHjiGenQSAyXeWEyoO3CW3iuDqFS1Bt9vGaN2uZV9PrfCKM3aegBjCJRW1TZ/s1536/ChatGPT%20Image%2017%20Ιαν%202026,%2003_46_39%20μ.μ..png",
+  "unused6": "https://admin.onassis.org/images/_ta_ciCD0fEssd-G1bVCTTGWdQ4=/7546/width-2560/ACROPOLIS_02_fin_copy.jpg",
+  "unused5": "https://admin.onassis.org/images/KmJNijYOnk92jJtAui0xGHBkAFQ=/7547/width-2560/ACROPOLIS_07_fin_copy.jpg",
+  "unused4_nice": "https://admin.onassis.org/images/o5YoOt8ef50wWn977O9P-QgLN9M=/7548/width-2560/ACROPOLIS_017_fin_copy.jpg",
+  "unused3": "https://onassiswebdata.blob.core.windows.net/prod/images/Gavriil_Papadiotis_Acropolis_20200927_205340_.width-1920_YTaAXX9Xf3ofOMKZ.jpg",
+  "unused2": "https://onassiswebdata.blob.core.windows.net/prod/images/EJO_0158.width-2560.jpg",
+  "akropolis_night_unused_url": "https://kimshistorytravel.com/wp-content/uploads/2024/10/The-Acropolis-at-Night-scaled.jpg",
   "link_groups": [
     {
       "name": "University",
       "links": [
         { "name": "Upel", "url": "https://upel.agh.edu.pl/login/index.php" },
         { "name": "USOS", "url": "https://web.usos.agh.edu.pl/kontroler.php?_action=news/default" },
-        { "name": "OneDrive", "url": "https://aghedupl-my.sharepoint.com"}
+        { "name": "OneDrive", "url": "https://aghedupl-my.sharepoint.com"},
+        { "name": "OneDrive EiT II", "url": "https://aghedupl-my.sharepoint.com/:f:/r/personal/gmazur_student_agh_edu_pl/Documents/Studia/magisterka/EIT%20Magisterka%202025-2026?csf=1&web=1&e=vzQuXy"}
       ]
     },
     {
@@ -21,7 +34,9 @@
       "name": "Misc",
       "links": [
         { "name": "OneDrive ARGO", "url": "https://aghedupl-my.sharepoint.com/my?remoteItem=%7B%22mp%22%3A%7B%22webAbsoluteUrl%22%3A%22https%3A%2F%2Faghedupl%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Faszcz%5Fstudent%5Fagh%5Fedu%5Fpl%22%2C%22listFullUrl%22%3A%22https%3A%2F%2Faghedupl%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Faszcz%5Fstudent%5Fagh%5Fedu%5Fpl%2FDocuments%22%2C%22rootFolder%22%3A%22%2Fpersonal%2Faszcz%5Fstudent%5Fagh%5Fedu%5Fpl%2FDocuments%2FArgo%20Sailing%20Team%22%7D%2C%22rsi%22%3A%7B%22webAbsoluteUrl%22%3A%22https%3A%2F%2Faghedupl%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fgorgon%5Fstudent%5Fagh%5Fedu%5Fpl%22%2C%22listFullUrl%22%3A%22https%3A%2F%2Faghedupl%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fgorgon%5Fstudent%5Fagh%5Fedu%5Fpl%2FDocuments%22%2C%22rootFolder%22%3A%22%2Fpersonal%2Fgorgon%5Fstudent%5Fagh%5Fedu%5Fpl%2FDocuments%2FPRIVATE%2FArgo%20Sailing%20Team%22%7D%7D" },
-        { "name": "Wake On Lan Status", "url": "https://frog02-20432.wykr.es" }
+        { "name": "Wake On Lan Status", "url": "https://frog02-20432.wykr.es" },
+        { "name": "Messenger", "url": "https://www.facebook.com/messages/" },
+        { "name": "Proton", "url": "https://mail.proton.me/" }
       ]
     }
   ]
