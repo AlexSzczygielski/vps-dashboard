@@ -1,0 +1,5 @@
+*.out
+.wol_env
+wol_log.txt
+venv
+__pycache__

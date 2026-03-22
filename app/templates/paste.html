@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Pastebin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <style>
+        .paste-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .paste-form textarea {
+            width: 100%;
+            min-height: 200px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #555;
+            background-color: #222;
+            color: #eee;
+            box-sizing: border-box;
+            font-family: monospace;
+        }
+        .paste-form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #a0c4ff;
+            color: #121212;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        .paste-form button:hover {
+            background-color: #8aabdb;
+        }
+        .paste-view {
+            background: #1e1e1e;
+            border: 1px solid #333;
+            padding: 20px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: monospace;
+        }
+        .pastes-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .pastes-list li {
+            margin-bottom: 10px;
+        }
+        .pastes-list a {
+            color: #a0c4ff;
+            text-decoration: none;
+        }
+        .pastes-list a:hover {
+            text-decoration: underline;
+        }
+        nav {
+            padding: 10px 20px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="paste-container">
+        <nav>
+            <a href="{{ url_for('main.index') }}">&larr; Dashboard</a>
+        </nav>
+        <nav>
+            <a href="{{ url_for('main.paste') }}">Pastebin Home</a>
+        </nav>
+        <nav>
+            <a href="{{ url_for('main.logout') }}">Logout</a>
+        </nav>
+
+        {% if single_paste %}
+            {# View a single paste #}
+            <h2>Paste #{{ paste_id }}</h2>
+            <div class="paste-view">{{ content }}</div>
+
+        {% else %}
+            {# Main pastebin page: form and list #}
+            <h1>New Paste</h1>
+            <h2>DON'T PUT CONFIDENTIAL DATA INSIDE THIS PASTEBIN</h2>
+            <form method="post" class="paste-form">
+                <textarea name="content" placeholder="Paste your content here..."></textarea>
+                <button type="submit">Save Paste</button>
+            </form>
+
+            <hr style="margin: 40px 0; border-color: #444;">
+
+            <div class="pastes-list">
+                <h2>Existing Pastes</h2>
+                {% if pastes %}
+                    <ul>
+                        {% for p in pastes %}
+                        <li><a href="{{ url_for('main.view_paste', paste_id=p.id) }}">{{ p.id }}</a> - Created: {{ p.timestamp }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No pastes found.</p>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

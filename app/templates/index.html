@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body style="background-image: url('{{ background_image_url }}');">
+
+    <header>
+        <div class="header-nav">
+            {% if pastebin_enabled %}
+                <a href="{{ url_for('main.paste') }}">Pastebin</a>
+            {% endif %}
+        </div>
+        <h1 id="greeting"></h1>
+        <div id="clock"></div>
+    </header>
+
+    <main>
+        <div class="link-groups-container">
+            {% for group in link_groups %}
+            <div class="link-group">
+                <h2>{{ group.name }}</h2>
+                <ul>
+                    {% for link in group.links %}
+                    <li><a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+
+    <footer>
+        <p>Dashboard App</p>
+    </footer>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const clock = document.getElementById('clock');
+            const greetingEl = document.getElementById('greeting');
+            const hours = now.getHours();
+            
+            // Format time
+            const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            clock.textContent = timeString;
+
+            // Set greeting
+            let greeting = "Welcome";
+            const name = "{{ greeting_name }}";
+            if (hours < 12) {
+                greeting = "Good morning";
+            } else if (hours < 18) {
+                greeting = "Good afternoon";
+            } else {
+                greeting = "Good evening";
+            }
+            greetingEl.textContent = `${greeting}, ${name}`;
+        }
+
+        // Update clock immediately and then every second
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "greeting_name": "Olek",
+  "background_image_url": "https://unsplash.com/photos/brown-concrete-statue-under-blue-sky-during-daytime-Xfu28sRTFWY",
+  "link_groups": [
+    {
+      "name": "University",
+      "links": [
+        { "name": "Upel", "url": "https://upel.agh.edu.pl/login/index.php" },
+        { "name": "USOS", "url": "https://web.usos.agh.edu.pl/kontroler.php?_action=news/default" },
+        { "name": "OneDrive", "url": "https://aghedupl-my.sharepoint.com"}
+      ]
+    },
+    {
+      "name": "Dev",
+      "links": [
+        { "name": "GitHub", "url": "https://github.com" },
+        { "name": "GitHub KN", "url": "https://github.com/AGHRapidPro" }
+      ]
+    },
+    {
+      "name": "Misc",
+      "links": [
+        { "name": "OneDrive ARGO", "url": "https://aghedupl-my.sharepoint.com/my?remoteItem=%7B%22mp%22%3A%7B%22webAbsoluteUrl%22%3A%22https%3A%2F%2Faghedupl%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Faszcz%5Fstudent%5Fagh%5Fedu%5Fpl%22%2C%22listFullUrl%22%3A%22https%3A%2F%2Faghedupl%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Faszcz%5Fstudent%5Fagh%5Fedu%5Fpl%2FDocuments%22%2C%22rootFolder%22%3A%22%2Fpersonal%2Faszcz%5Fstudent%5Fagh%5Fedu%5Fpl%2FDocuments%2FArgo%20Sailing%20Team%22%7D%2C%22rsi%22%3A%7B%22webAbsoluteUrl%22%3A%22https%3A%2F%2Faghedupl%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fgorgon%5Fstudent%5Fagh%5Fedu%5Fpl%22%2C%22listFullUrl%22%3A%22https%3A%2F%2Faghedupl%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fgorgon%5Fstudent%5Fagh%5Fedu%5Fpl%2FDocuments%22%2C%22rootFolder%22%3A%22%2Fpersonal%2Fgorgon%5Fstudent%5Fagh%5Fedu%5Fpl%2FDocuments%2FPRIVATE%2FArgo%20Sailing%20Team%22%7D%7D" },
+        { "name": "Wake On Lan Status", "url": "https://frog02-20432.wykr.es" }
+      ]
+    }
+  ]
+}
