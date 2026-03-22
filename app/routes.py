@@ -1,4 +1,4 @@
-from flask import Blueprint, request, current_app, render_template, session, redirect, url_for, flash, abort
+from flask import Blueprint, request, current_app, render_template, session, redirect, url_for, flash, abort, send_from_directory
 import datetime
 import json
 import os
@@ -128,3 +128,21 @@ def view_paste(paste_id):
         content = f.read()
         
     return render_template('paste.html', single_paste=True, paste_id=paste_id, content=content)
+
+# --- DEMO ASSETS ROUTES ---
+@main.route('/demo_assets/<asset_name>')
+def get_demo_asset(asset_name):
+    """Used to return pics stored as demo_assets - e.g. for github uses."""
+    folder = os.path.join(current_app.root_path, 'static', 'demo_assets')
+
+    # Security: prevent directory traversal
+    if '..' in asset_name or asset_name.startswith('/'):
+        abort(400)
+
+    # Check if file exists
+    file_path = os.path.join(folder, asset_name)
+    if not os.path.isfile(file_path):
+        abort(404)
+
+    # Serve the file
+    return send_from_directory(folder, asset_name)
