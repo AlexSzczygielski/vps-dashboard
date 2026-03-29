@@ -5,3 +5,4 @@ venv
 __pycache__
 app/pastes
 app/static/demo_assets
+wol.log

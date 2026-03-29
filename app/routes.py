@@ -52,14 +52,42 @@ def index():
     config = load_dashboard_config()
     pastebin_enabled = current_app.config.get('PASTEBIN_ENABLED', False)
 
+    # --- READ LOGS ---
+    log_lines = []
+    log_file = "/tmp/wol.log"
+
+    if os.path.exists(log_file):
+        try:
+            with open(log_file, "r") as f:
+                log_lines = f.readlines()[-5:]  # last 5 lines
+            log_lines.reverse()  # newest first
+        except Exception as e:
+            log_lines = [f"Failed to read log: {e}\n"]
+
     return render_template(
         'index.html',
         greeting_name=config.get("greeting_name", "User"),
         day_background_image_url=config.get("day_background_image_url"),
         night_background_image_url=config.get("night_background_image_url"),
         link_groups=config.get("link_groups", []),
-        pastebin_enabled=pastebin_enabled
+        pastebin_enabled=pastebin_enabled,
+        log_lines=log_lines
     )
+
+@main.route('/api/logs')
+def get_logs():
+    log_lines = []
+    log_file = "wol.log"
+
+    if os.path.exists(log_file):
+        try:
+            with open(log_file, "r") as f:
+                log_lines = f.readlines()[-5:]
+            log_lines.reverse()
+        except Exception as e:
+            log_lines = [f"Failed to read log: {e}\n"]
+
+    return {"logs": log_lines}
 
 # --- PASTEBIN ROUTES ---
 

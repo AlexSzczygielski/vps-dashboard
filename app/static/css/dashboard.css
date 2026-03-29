@@ -132,3 +132,35 @@ footer {
     border-radius: 8px;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
+
+/* WOL LOG styling */
+
+.log-section {
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.log-container {
+    background-color: #1e1e2f;
+    color: #f8f8f2;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    padding: 15px;
+    border-radius: 12px;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.log-line {
+    padding: 2px 0;
+    white-space: pre-wrap;
+}
+
+.log-line.request { color: #fbbf24; }
+.log-line.success { color: #22c55e; }
+.log-line.error { color: #ef4444; }
+
+.log-separator {
+    height: 10px;
+}
