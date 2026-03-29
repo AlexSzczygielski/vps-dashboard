@@ -6,6 +6,7 @@ import uuid
 from functools import wraps
 
 main = Blueprint('main', __name__)
+log_file = "/tmp/wol.log"
 
 # --- PASTEBIN HELPERS & DECORATOR ---
 
@@ -54,7 +55,6 @@ def index():
 
     # --- READ LOGS ---
     log_lines = []
-    log_file = "/tmp/wol.log"
 
     if os.path.exists(log_file):
         try:
@@ -77,7 +77,6 @@ def index():
 @main.route('/api/logs')
 def get_logs():
     log_lines = []
-    log_file = "wol.log"
 
     if os.path.exists(log_file):
         try:
