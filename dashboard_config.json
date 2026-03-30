@@ -20,6 +20,7 @@
         { "name": "Upel", "url": "https://upel.agh.edu.pl/login/index.php" },
         { "name": "USOS", "url": "https://web.usos.agh.edu.pl/kontroler.php?_action=news/default" },
         { "name": "OneDrive", "url": "https://aghedupl-my.sharepoint.com"},
+        { "name": "OneDrive EiT Own", "url": "https://aghedupl-my.sharepoint.com/my?id=%2Fpersonal%2Faszcz%5Fstudent%5Fagh%5Fedu%5Fpl%2FDocuments%2FEIT%5FII&viewid=c3ac89cb%2D19a4%2D4b0e%2Da9dd%2Df8f5ad4b775d"},
         { "name": "OneDrive EiT II", "url": "https://aghedupl-my.sharepoint.com/:f:/r/personal/gmazur_student_agh_edu_pl/Documents/Studia/magisterka/EIT%20Magisterka%202025-2026?csf=1&web=1&e=vzQuXy"}
       ]
     },
@@ -36,7 +37,8 @@
         { "name": "OneDrive ARGO", "url": "https://aghedupl-my.sharepoint.com/my?remoteItem=%7B%22mp%22%3A%7B%22webAbsoluteUrl%22%3A%22https%3A%2F%2Faghedupl%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Faszcz%5Fstudent%5Fagh%5Fedu%5Fpl%22%2C%22listFullUrl%22%3A%22https%3A%2F%2Faghedupl%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Faszcz%5Fstudent%5Fagh%5Fedu%5Fpl%2FDocuments%22%2C%22rootFolder%22%3A%22%2Fpersonal%2Faszcz%5Fstudent%5Fagh%5Fedu%5Fpl%2FDocuments%2FArgo%20Sailing%20Team%22%7D%2C%22rsi%22%3A%7B%22webAbsoluteUrl%22%3A%22https%3A%2F%2Faghedupl%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fgorgon%5Fstudent%5Fagh%5Fedu%5Fpl%22%2C%22listFullUrl%22%3A%22https%3A%2F%2Faghedupl%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fgorgon%5Fstudent%5Fagh%5Fedu%5Fpl%2FDocuments%22%2C%22rootFolder%22%3A%22%2Fpersonal%2Fgorgon%5Fstudent%5Fagh%5Fedu%5Fpl%2FDocuments%2FPRIVATE%2FArgo%20Sailing%20Team%22%7D%7D" },
         { "name": "Wake On Lan Status", "url": "https://frog02-20432.wykr.es" },
         { "name": "Messenger", "url": "https://www.facebook.com/messages/" },
-        { "name": "Proton", "url": "https://mail.proton.me/" }
+        { "name": "Proton", "url": "https://mail.proton.me/" },
+        { "name": "Claude", "url": "https://claude.ai/new" }
       ]
     }
   ]
